@@ -1,12 +1,13 @@
-/* PALETA DE CORES & VARIÁVEIS (Azul Marinho, Bege Jornal e Dourado) */
+/* Paleta Azul Marinho & Estética Vintage Journal */
 :root {
-    --navy-primary: #0A192F;
-    --navy-secondary: #1E3A8A;
-    --navy-light: #3B82F6;
-    --paper-bg: #FDFBF7;
-    --paper-card: #F4EFEB;
-    --text-dark: #1C2321;
-    --accent-gold: #C5A059;
+    --navy-dark: #0a192f;
+    --navy-medium: #112240;
+    --navy-light: #233554;
+    --accent-gold: #d4af37;
+    --paper-beige: #f4ebd9;
+    --paper-white: #fdfbf7;
+    --text-dark: #1c2321;
+    --shadow-color: rgba(10, 25, 47, 0.25);
 }
 
 * {
@@ -16,190 +17,257 @@
 }
 
 body {
-    background-color: var(--navy-primary);
+    background-color: var(--navy-dark);
     color: var(--text-dark);
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
-    background-size: 20px 20px;
-}
-
-/* HEADER ESTILO REVISTA */
-.hero {
-    text-align: center;
-    padding: 60px 20px 40px;
-    color: var(--paper-bg);
-}
-
-.journal-badge {
-    display: inline-block;
-    border: 1px solid var(--accent-gold);
-    color: var(--accent-gold);
-    padding: 5px 15px;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.main-title {
     font-family: 'Playfair Display', serif;
+    padding: 20px;
+    background-image: radial-gradient(var(--navy-light) 1px, transparent 0);
+    background-size: 24px 24px;
+}
+
+/* Container Principal - Estilo Caderno / Revista */
+.journal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: var(--paper-beige);
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    border: 2px solid var(--navy-medium);
+}
+
+/* Fita Adesiva (Tape Effect) */
+.tape {
+    position: absolute;
+    width: 120px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 1px dashed #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transform: rotate(-3deg);
+    z-index: 10;
+}
+.tape-top-left { top: -10px; left: 20px; }
+.tape-top-right { top: -10px; right: 20px; transform: rotate(4deg); }
+.tape-card { top: -12px; left: 30%; }
+
+/* Header */
+.magazine-header {
+    text-align: center;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.issue-number {
+    font-family: 'Special Elite', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: var(--navy-medium);
+}
+
+.magazine-title {
     font-size: 3.5rem;
     font-weight: 800;
-    letter-spacing: -1px;
-    color: #FFFFFF;
+    color: var(--navy-dark);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 10px 0;
 }
 
 .subtitle {
     font-style: italic;
-    color: #94A3B8;
-    font-size: 1.2rem;
+    color: var(--navy-light);
+    font-size: 1.1rem;
 }
 
-/* CONTAINER PRINCIPAL */
-.container {
-    max-width: 900px;
-    margin: 0 auto;
+.header-divider {
+    height: 4px;
+    background: var(--navy-dark);
+    margin-top: 15px;
+    border-top: 1px solid var(--navy-dark);
+    border-bottom: 1px solid var(--navy-dark);
+}
+
+/* Citação Destaque */
+.highlight-quote {
+    margin: 35px 0;
+    text-align: center;
+}
+
+.cutout-box {
+    background-color: var(--navy-dark);
+    color: var(--paper-beige);
     padding: 20px;
+    display: inline-block;
+    transform: rotate(-1deg);
+    box-shadow: 5px 5px 0px var(--accent-gold);
 }
 
-/* CARDS COM ESTÉTICA DE PAPEL / JOURNAL */
-.paper-card {
-    background-color: var(--paper-card);
-    border-radius: 4px;
-    padding: 35px;
-    margin-bottom: 40px;
-    position: relative;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    border: 1px solid #E2D8CE;
-}
-
-.paper-card h2 {
-    font-family: 'Playfair Display', serif;
-    color: var(--navy-primary);
+.quote-text {
+    font-family: 'Caveat', cursive;
     font-size: 2rem;
-    margin-bottom: 20px;
-    border-bottom: 2px solid var(--accent-gold);
-    padding-bottom: 8px;
+    letter-spacing: 1px;
 }
 
-/* ELEMENTOS DE RECORTES E FITAS DUREX */
-.tape {
-    position: absolute;
-    top: -12px;
-    left: 40%;
-    width: 100px;
-    height: 25px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(0,0,0,0.05);
-    transform: rotate(-2deg);
+/* Fotos Scrapbook */
+.photo-scrapbook {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
 }
 
-.stamp {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    border: 2px dashed var(--accent-gold);
-    color: var(--accent-gold);
-    font-weight: bold;
-    padding: 5px 10px;
-    font-size: 0.8rem;
-    transform: rotate(12deg);
+.polaroid {
+    background: var(--paper-white);
+    padding: 15px 15px 25px 15px;
+    box-shadow: 0 8px 15px var(--shadow-color);
+    position: relative;
+    width: 260px;
+    text-align: center;
 }
 
-/* LAYOUT DE GRID PARA SEÇÕES */
-.grid-bio, .grid-love {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 25px;
-    align-items: center;
-}
+.card-1 { transform: rotate(-4deg); }
+.card-2 { transform: rotate(3deg); }
 
-@media (max-width: 768px) {
-    .grid-bio, .grid-love {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* FOTOS ESTILO POLAROID & RECORTES */
-.photo-cutout img, .polaroid-frame img {
+.polaroid img {
     width: 100%;
-    height: 220px;
+    height: 240px;
     object-fit: cover;
-    border-radius: 2px;
-}
-
-.photo-cutout {
-    border: 8px solid #FFF;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transform: rotate(-3deg);
-    background: #FFF;
+    filter: sepia(20%) contrast(105%);
 }
 
 .caption {
-    display: block;
-    text-align: center;
-    font-size: 0.75rem;
-    color: #666;
-    margin-top: 5px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.4rem;
+    margin-top: 10px;
+    color: var(--navy-dark);
 }
 
-.polaroid-frame {
-    background: #FFF;
-    padding: 12px 12px 25px 12px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    transform: rotate(2deg);
-    text-align: center;
-}
-
-.handwritten {
-    font-family: 'Reenie Beanie', cursive;
-    font-size: 1.8rem;
-    color: var(--navy-secondary);
-    margin-top: 8px;
-}
-
-/* LINHA DO TEMPO (TIMELINE) */
-.timeline {
-    border-left: 2px solid var(--navy-secondary);
-    padding-left: 20px;
-    margin-top: 15px;
-}
-
-.timeline-item {
-    margin-bottom: 25px;
-    position: relative;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: -26px;
-    top: 5px;
-    width: 10px;
-    height: 10px;
+.pin {
+    width: 12px;
+    height: 12px;
+    background-color: #c0392b;
     border-radius: 50%;
-    background-color: var(--accent-gold);
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 
-.year {
-    font-weight: 600;
-    color: var(--navy-secondary);
-    font-size: 0.9rem;
+/* Timeline */
+.section-title {
+    text-align: center;
+    font-family: 'Special Elite', monospace;
+    color: var(--navy-dark);
+    margin: 40px 0 30px;
     text-transform: uppercase;
 }
 
-.timeline-item.highlight {
-    background-color: rgba(30, 58, 138, 0.05);
-    padding: 15px;
-    border-radius: 4px;
-    border-left: 3px solid var(--navy-secondary);
+.timeline {
+    position: relative;
+    padding: 20px 0;
 }
 
-/* FOOTER */
-footer {
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    background: var(--navy-medium);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    width: 50%;
+}
+
+.timeline-item.left { left: 0; padding-right: 30px; }
+.timeline-item.right { left: 50%; padding-left: 30px; }
+
+.stamp {
+    position: absolute;
+    top: 0;
+    font-family: 'Special Elite', monospace;
+    background: var(--navy-dark);
+    color: var(--paper-beige);
+    padding: 4px 8px;
+    font-size: 0.8rem;
+}
+
+.timeline-item.left .stamp { right: -15px; }
+.timeline-item.right .stamp { left: -15px; }
+
+.timeline-content {
+    background: var(--paper-white);
+    padding: 20px;
+    border: 1px solid var(--navy-light);
+    box-shadow: 4px 4px 0px var(--navy-medium);
+}
+
+.timeline-content h3 {
+    color: var(--navy-dark);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Destaque Deluxe */
+.special-feature .timeline-content {
+    background-color: #eef3f8;
+    border: 2px dashed var(--navy-dark);
+}
+
+.badge {
+    display: inline-block;
+    background: var(--accent-gold);
+    color: var(--navy-dark);
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+/* Footer */
+.magazine-footer {
+    margin-top: 50px;
     text-align: center;
-    color: #64748B;
-    font-size: 0.85rem;
-    padding: 30px 20px;
+    border-top: 2px solid var(--navy-dark);
+    padding-top: 20px;
+}
+
+.vintage-btn {
+    margin-top: 15px;
+    background: var(--navy-dark);
+    color: var(--paper-beige);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Special Elite', monospace;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.vintage-btn:hover {
+    background: var(--navy-light);
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .timeline::before { left: 20px; }
+    .timeline-item { width: 100%; padding-left: 50px !important; padding-right: 0 !important; }
+    .timeline-item.right { left: 0; }
+    .timeline-item.left .stamp, .timeline-item.right .stamp { left: 0; right: auto; }
+    .magazine-title { font-size: 2.3rem; }
 }
