@@ -1,93 +1,158 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Revista | Ana Gabriela</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Reenie+Beanie&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revista A.G | Fan Page Ana Gabriela</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Reenie+Beanie&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="hero">
-        <div class="journal-badge">Edição Especial • MPB Journal</div>
-        <h1 class="main-title">Ana Gabriela</h1>
-        <p class="subtitle">Sons, Afetos & Trajetória</p>
-    </header>
+  <!-- Textura de fundo estilo jornal/papel -->
+  <div class="paper-overlay"></div>
 
-    <main class="container">
+  <!-- Cabeçalho Estilo Jornal Vintage -->
+  <header class="magazine-header">
+    <div class="header-top">
+      <span>EDIÇÃO ESPECIAL DE COLECIONADOR</span>
+      <span>ED. Nº 01 — BRASIL</span>
+      <span>ESTÉTICA MPB & JOURNAL</span>
+    </div>
+    <h1 class="magazine-title">GAZETA ANA GABRIELA</h1>
+    <p class="tagline">Uma Retrospectiva Ilustrada da Trajetória Musical & Sentimental</p>
+    <div class="header-border"></div>
+  </header>
 
-        <section class="paper-card bio-section">
-            <div class="tape"></div>
-            <div class="card-content">
-                <h2>Biografia Musical</h2>
-                <div class="grid-bio">
-                    <div class="photo-cutout">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Ana Gabriela Estilo MPB">
-                        <span class="caption">São José dos Campos ➔ Brasil</span>
-                    </div>
-                    <div class="text-content">
-                        <p>Nascida em São José dos Campos (SP), Ana Gabriela começou a encantar o público no YouTube, onde seus covers minimalistas de MPB e Pop ganharam milhões de visualizações. Com uma voz aveludada e um toque único no violão, ela rapidamente transicionou da internet para os grandes palcos da música brasileira.</p>
-                        <p>Sua sonoridade une a delicadeza do acústico com letras profundas sobre amor, relacionamentos e autoconhecimento.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <main class="container">
 
-        <section class="paper-card timeline-section">
-            <h2>Linha do Tempo & Discografia</h2>
-            <div class="timeline">
-                
-                <div class="timeline-item">
-                    <div class="year">2017 - 2018</div>
-                    <div class="details">
-                        <h3>Os Primeiros Passos & EPs</h3>
-                        <p>Lançamento de singles marcantes como <em>"Dois Metros e Um Café"</em> e o EP <em>"Dois de Nós"</em>, consolidando sua assinatura na nova MPB.</p>
-                    </div>
-                </div>
+    <!-- Capa / Introdução -->
+    <section class="journal-hero">
+      <div class="hero-image-wrapper polaroid">
+        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&q=80&w=800" alt="Ana Gabriela Estilo MPB" class="hero-img">
+        <p class="caption">A voz doce do violão e da MPB moderna.</p>
+      </div>
+      <div class="hero-text-block cutout-article">
+        <span class="stamp">BIOGRAFIA</span>
+        <h2>Do Quarto para os Palcos do Brasil</h2>
+        <p class="first-letter">N</p>
+        <p class="article-body">
+          Nascida em São José dos Campos, Ana Gabriela começou sua jornada musical gravando vídeos acústicos no YouTube. Com sua interpretação única, timbre suave e o som confortante do violão, conquistou milhões de ouvintes, tornando-se uma das principais referências da nova MPB e do pop romântico no país.
+        </p>
+      </div>
+    </section>
 
-                <div class="timeline-item">
-                    <div class="year">2020</div>
-                    <div class="details">
-                        <h3>Álbum "Ana"</h3>
-                        <p>Seu primeiro álbum de estúdio completo, trazendo maturidade musical, arranjos mais encorpados e participações especiais.</p>
-                    </div>
-                </div>
+    <!-- Linha do Tempo Musical (Timeline Estilo Journal) -->
+    <section class="timeline-section">
+      <h2 class="section-heading"><span>LINHA DO TEMPO MUSICAL</span></h2>
 
-                <div class="timeline-item highlight">
-                    <div class="year">Recente</div>
-                    <div class="details">
-                        <h3>"Baseado em Fatos Reais" (feat. Carol Biazin)</h3>
-                        <p>Um dos momentos mais fortes de sua carreira recente. A parceria com Carol Biazin une duas das vozes mais potentes do pop/MPB moderno em uma faixa intimista e visceral.</p>
-                    </div>
-                </div>
+      <div class="timeline">
 
-            </div>
-        </section>
+        <!-- Marcador 1 -->
+        <div class="timeline-item left">
+          <div class="timeline-content journal-card">
+            <span class="tape"></span>
+            <div class="year-badge">2015 - 2018</div>
+            <h3>O Início & O Fenômeno nos Covers</h3>
+            <p>Com um violão em mãos, Ana viralizou com releituras intimistas de clássicos da MPB e sucessos do pop. Parcerias icônicas no canal do YouTube abriram portas para suas primeiras composições autorais, como o EP <em>EP 1</em>.</p>
+          </div>
+        </div>
 
-        <section class="paper-card love-section">
-            <div class="stamp">LOVE</div>
-            <h2>Amor sem Fronteiras: Ana & Ashlyn</h2>
-            <div class="grid-love">
-                <div class="text-content">
-                    <p>Além da música, a vida pessoal de Ana Gabriela também inspira seus fãs. Seu relacionamento com a texana <strong>Ashlyn</strong> mostra como o afeto atravessa distâncias.</p>
-                    <p>Com momentos compartilhados entre viagens, composições e a rotina do casal, essa união traz uma camada extra de autenticidade e carinho que transborda nas redes e na arte da cantora.</p>
-                </div>
-                <div class="polaroid-frame">
-                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=600&q=80" alt="Momento Romântico">
-                    <p class="handwritten">Ana & Ashlyn ♡</p>
-                </div>
-            </div>
-        </section>
+        <!-- Marcador 2 -->
+        <div class="timeline-item right">
+          <div class="timeline-content journal-card">
+            <span class="tape"></span>
+            <div class="year-badge">2020</div>
+            <h3>Álbum "Ana"</h3>
+            <p>Seu álbum de estreia consolidou sua identidade artística. Trazendo canções autorais que exploram o amor, a vulnerabilidade e os dilemas da juventude, o trabalho foi aclamado pelos fãs e crítica do pop leve/MPB.</p>
+          </div>
+        </div>
 
-    </main>
+        <!-- Marcador 3 -->
+        <div class="timeline-item left">
+          <div class="timeline-content journal-card">
+            <span class="tape"></span>
+            <div class="year-badge">2022 - 2023</div>
+            <h3>Consolidação & Colaborações</h3>
+            <p>Fase marcada por turnês pelo Brasil, participações em grandes festivais e singles de sucesso. Ana estabeleceu parcerias marcantes com grandes nomes da nova música brasileira.</p>
+          </div>
+        </div>
 
-    <footer>
-        <p>Fã-Club Journal • Feito com carinho para os fãs de Ana Gabriela</p>
-    </footer>
+        <!-- Marcador 4 -->
+        <div class="timeline-item right highlight-album">
+          <div class="timeline-content journal-card special-card">
+            <span class="stamp-new">ÚLTIMO LANÇAMENTO</span>
+            <div class="year-badge">RECENTE</div>
+            <h3>Álbum: "Baseado em Fatos Reais"</h3>
+            <p>Um projeto maduro, visceral e autobiográfico. "Baseado em Fatos Reais" reflete vivências profundas, desamores, reconstrução e cura através de melodias envolventes de MPB com produção moderna.</p>
+          </div>
+        </div>
 
-    <script src="script.js"></script>
+      </div>
+    </section>
+
+    <!-- Seção Especial: Feat Carol Biazin (Album Deluxe) -->
+    <section class="deluxe-highlight">
+      <div class="cutout-box">
+        <div class="cutout-header">
+          <span class="badge-deluxe">EDITION DELUXE</span>
+          <h2>Destaque da Versão Deluxe</h2>
+        </div>
+        <div class="deluxe-grid">
+          <div class="deluxe-info">
+            <h3>Feat Especial: Ana Gabriela & Carol Biazin</h3>
+            <p>No aguardado relançamento do álbum <strong>"Baseado em Fatos Reais (Deluxe)"</strong>, Ana uniu forças com a cantora <strong>Carol Biazin</strong>. A colaboração traz um dueto emocionante, unindo a doçura e a potência vocal das duas maiores vozes da nova geração.</p>
+            <ul class="journal-list">
+              <li>📌 Harmonias vocais impecáveis</li>
+              <li>📌 Produção refinada no estilo MPB Pop</li>
+              <li>📌 Uma das faixas mais aclamadas pelos fãs nas plataformas</li>
+            </ul>
+          </div>
+          <div class="deluxe-photo polaroid rotate-right">
+            <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&q=80&w=600" alt="Feat Carol Biazin e Ana Gabriela">
+            <p class="caption">Encontro de Gerações da Nova MPB</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria Estilo Recortes de Revista -->
+    <section class="gallery-section">
+      <h2 class="section-heading"><span>MURAL DE RECERTES & FOTOS</span></h2>
+      <div class="scrapbook-grid">
+        <div class="scrap-item p1">
+          <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&q=80&w=500" alt="Ana Gabriela Ao Vivo">
+          <span class="handwritten">Nos palcos...</span>
+        </div>
+        <div class="scrap-item p2">
+          <img src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&q=80&w=500" alt="Violão e Composição">
+          <span class="handwritten">Composição & Violão</span>
+        </div>
+        <div class="scrap-item p3">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&q=80&w=500" alt="Sessão de Fotos">
+          <span class="handwritten">Estética Vintage</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Player de Mensagem Interativa -->
+    <section class="interactive-journal">
+      <div class="note-paper">
+        <h3>Recadinho para os Fãs</h3>
+        <p id="quote-display">"A música é a forma mais sincera que encontrei de conversar com o mundo."</p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="magazine-footer">
+    <div class="footer-line"></div>
+    <p>© Fã-Clube Dedicado à Ana Gabriela — Feito com estética Vintage & MPB Journal</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
